@@ -1,177 +1,525 @@
+/* Add this to your existing StartPage.css */
 /* clients/src/components/StartPage.css */
+
 .start-page-container {
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   min-height: 100vh; 
+
   width: 100vw;   
+
   background: linear-gradient(135deg, #FF6F00 0%, #FFB300 100%); 
+
   padding: 2rem;
+
   box-sizing: border-box; 
+
 }
+
+
 
 .start-page-title {
+
   font-size: 4rem; 
+
   font-weight: 900; 
+
   color: #FFFFFF;
+
   margin-bottom: 1.5rem;
+
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+
   letter-spacing: 0.1rem; 
+
   animation: fadeInDown 1s ease-out; 
+
+  
 }
+
+
 
 .start-page-description {
+
   font-size: 1.6rem; 
+
   color: #FFF3E0; 
+
   margin-bottom: 2.5rem;
+
   font-weight: 500;
+
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
   animation: fadeIn 1.5s ease-out; 
+
 }
+
+
 
 .difficulty-buttons {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 1.5rem;
+
   width: 100%;
+
   max-width: 22rem; 
+
   animation: fadeInUp 1s ease-out forwards;
+
   opacity: 0;
+
   animation-delay: 0.5s;
+
 }
+
+
 
 .difficulty-button {
+
   padding: 1.35rem 2.2rem;
+
   font-size: 1.6rem; 
+
   font-weight: bold;
+
   color: #4A2C0A;
+
   border-radius: 0.75rem; 
+
   border: none;
+
   cursor: pointer;
+
   transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+
   position: relative;
+
   overflow: hidden; 
+
   text-transform: uppercase;
+
   letter-spacing: 0.05rem;
+
 }
+
+
 
 .difficulty-button:hover {
+
   transform: translateY(-5px); 
+
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+
   filter: brightness(1.1); 
+
 }
+
+
 
 .difficulty-button:active {
+
   transform: translateY(0);
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
+
+
 
 .difficulty-button.very-easy {
+
   background-color: #fbba81; 
+
 }
+
 .difficulty-button.very-easy:hover {
+
   background-color: #f19b51; 
+
 }
+
+
 
 .difficulty-button.easy {
+
   background-color: #FFA500;
+
 }
+
 .difficulty-button.easy:hover {
+
   background-color: #FF8C00; 
+
 }
+
+
 
 .difficulty-button.medium {
+
   background-color: #FF8C00;
+
 }
+
 .difficulty-button.medium:hover {
+
   background-color: #fc7730; 
+
 }
+
+
 
 .difficulty-button.hard {
+
   background-color: #E05000; 
+
 }
+
 .difficulty-button.hard:hover {
+
   background-color: #CC4400; 
+
 }
+
+
 
 @keyframes fadeInDown {
+
   from {
+
     opacity: 0;
+
     transform: translateY(-20px);
+
   }
+
   to {
+
     opacity: 1;
+
     transform: translateY(0);
+
   }
+
 }
+
+
 
 @keyframes fadeIn {
+
   from {
+
     opacity: 0;
+
   }
+
   to {
+
     opacity: 1;
+
   }
+
 }
+
+
 
 @keyframes fadeInUp {
+
   from {
+
     opacity: 0;
+
     transform: translateY(20px);
+
   }
+
   to {
+
     opacity: 1;
+
     transform: translateY(0);
+
   }
+
 }
+
+
 
 /* --- Mobile Responsive Styles --- */
+
 @media (max-width: 768px) {
+
   .start-page-container {
+
     padding: 1.5rem; 
+
   }
+
+
 
   .start-page-title {
+
     font-size: 2.8rem; 
+
     margin-bottom: 1rem;
+
   }
+
+
 
   .start-page-description {
+
     font-size: 1.2rem; 
+
     margin-bottom: 2rem;
+
     text-align: center; 
+
   }
+
+
 
   .difficulty-buttons {
+
     gap: 1rem;
+
     max-width: 18rem;
+
   }
 
+
+
   .difficulty-button {
+
     padding: 1rem 1.5rem;
+
     font-size: 1.3rem; 
+
+  }
+
+}
+
+
+
+/* --- Small Mobile Devices (e.g., iPhone SE) --- */
+
+@media (max-width: 480px) {
+
+  .start-page-title {
+
+    font-size: 2.2rem; 
+
+  }
+
+
+
+  .start-page-description {
+
+    font-size: 1rem;
+
+    margin-bottom: 1.5rem;
+
+  }
+
+
+
+  .difficulty-buttons {
+
+    max-width: 15rem;
+
+  }
+
+
+
+  .difficulty-button {
+
+    padding: 0.8rem 1.2rem; 
+
+    font-size: 1.1rem; 
+
+  }
+
+}
+/* Puzzle Credit Section */
+.puzzle-credit {
+  margin-top: 3rem;
+  background: rgba(255, 215, 0, 0.15);
+  border-radius: 0;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: puzzleAppear 1.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
+  overflow: hidden;
+}
+
+.puzzle-border-top,
+.puzzle-border-bottom {
+  display: flex;
+  width: 100%;
+  height: 15px;
+  background: rgba(255, 165, 0, 0.7);
+}
+
+.puzzle-tab {
+  width: 12.5%;
+  height: 100%;
+  position: relative;
+}
+
+.puzzle-tab.outward::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  background: inherit;
+  top: -10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.puzzle-tab.inward::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  background: #FF6F00;
+  bottom: -10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.credit-content {
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.credit-main {
+  font-family: 'Luckiest Guy', cursive, sans-serif;
+  font-size: 1.8rem;
+  color: #FFD700;
+  text-shadow: 3px 3px 0 #FF6F00, -1px -1px 0 #FF6F00;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.credit-name {
+  font-family: 'Fredoka One', cursive, sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: inline-block;
+}
+
+.credit-name::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+}
+
+.credit-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 0.9rem;
+  color: #FFF3E0;
+}
+
+.puzzle-divider {
+  color: #FFD700;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+@keyframes puzzleAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
   }
 }
 
-/* --- Small Mobile Devices (e.g., iPhone SE) --- */
+/* Add these font imports at the top of your CSS */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Update mobile responsive styles */
+@media (max-width: 768px) {
+  .puzzle-credit {
+    max-width: 90%;
+  }
+  
+  .credit-main {
+    font-size: 1.5rem;
+  }
+  
+  .credit-name {
+    font-size: 1.2rem;
+  }
+  
+  .credit-details {
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  
+  .puzzle-divider {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
-  .start-page-title {
-    font-size: 2.2rem; 
+  .credit-main {
+    font-size: 1.3rem;
   }
-
-  .start-page-description {
+  
+  .credit-name {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
   }
-
-  .difficulty-buttons {
-    max-width: 15rem;
+  
+  .credit-details {
+    font-size: 0.75rem;
   }
-
-  .difficulty-button {
-    padding: 0.8rem 1.2rem; 
-    font-size: 1.1rem; 
+  
+  .puzzle-tab {
+    width: 12.5%;
+  }
+  
+  .puzzle-tab.outward::after,
+  .puzzle-tab.inward::before {
+    height: 10px;
   }
 }
