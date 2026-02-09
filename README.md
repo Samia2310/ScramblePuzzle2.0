@@ -88,7 +88,7 @@ An inversion occurs when a tile with a higher number appears before a tile with 
 
 1. Clone the repository
 ```bash
-git clone https://github.com/Samia2310/scramble-puzzle.git
+git clone https://github.com/Samia2310/ScramblePuzzle2.0.git
 cd scramble-puzzle
 ```
 
@@ -168,7 +168,6 @@ function countInversions(puzzle) {
 
 ## 🎨 Screenshots
 
-<!-- Add your screenshots here -->
 ### Start Page
 <div align="center">
 <img width="300" height="540" alt="Screenshot 2026-02-09 213106" src="https://github.com/user-attachments/assets/243b598d-31db-4af1-8803-f8f817a106a6" />
@@ -201,13 +200,14 @@ Contributions are welcome! Feel free to:
 
 ## 📝 License
 
-This project is licensed under the MIT License - ![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg) 
+This project is licensed under the MIT License - 
+![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg) 
 
 ## 👩‍💻 Author
 
 **Samia Tabassum Chowdhury**
-- Senior Executive, Event Management
-- BRAC University Computer Club
+- CSE student, BRAC University
+- Senior Executive, Event Management, BRAC University Computer Club
 - GitHub: [Samia2310](https://github.com/Samia2310)
 - LinkedIn: [Samia Tabassum Chowdhury](https://www.linkedin.com/in/samia-tabassum-chowdhury-191229348)
 
