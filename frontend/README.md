@@ -1,70 +1,230 @@
-# Getting Started with Create React App
+# 🧩 Scramble Puzzle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, feature-rich sliding tile puzzle game built with React that combines intelligent algorithms with an engaging user interface!
 
-## Available Scripts
+![Scramble Puzzle Banner](./public/banner.png) <!-- Add your banner image -->
 
-In the project directory, you can run:
+## 🎮 Live Demo<img width="927" height="873" alt="banner" src="https://github.com/user-attachments/assets/f20f4ee8-d8cc-4c21-93d5-40f745017ba1" />
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Play Scramble Puzzle](https://scramble-puzzle2-0.vercel.app/) <!-- Add your deployed link -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📖 About The Project
 
-### `npm test`
+Scramble Puzzle is a React-based sliding tile game that brings the classic puzzle experience to modern web browsers. The game features intelligent puzzle generation ensuring every configuration is solvable, multiple difficulty levels, image selection, and persistent high score tracking.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Warning: Highly addictive - one puzzle is never enough!** 🎮
 
-### `npm run build`
+### ✨ Key Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **4 Difficulty Levels**: Progressive challenges from 2x2 to 5x5 grids
+  - Very Easy (2x2) - Perfect for beginners
+  - Easy (3x3) - Classic puzzle size
+  - Medium (4x4) - Getting challenging
+  - Hard (5x5) - Expert level
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Smart Puzzle Generation**: 
+  - Fisher-Yates shuffle algorithm for randomization
+  - Inversion count method ensures every puzzle is mathematically solvable
+  - Different solvability rules for odd and even grid sizes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Multiple Puzzle Images**: Choose from various images through an elegant selection modal
 
-### `npm run eject`
+- **High Score Tracking**: 
+  - Persistent localStorage system
+  - Tracks best scores for each difficulty level and image
+  - Celebrates new personal records
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Responsive Design**: Seamlessly adapts to desktop, tablet, and mobile devices
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Smooth Animations**: CSS3 animations for tile movements and UI transitions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Victory Modal**: Celebrates wins with move counts and high score achievements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Built With
 
-## Learn More
+- **React.js** - Frontend framework
+- **CSS** - Styling and animations
+- **JavaScript (ES6+)** - Core logic
+- **localStorage API** - Persistent data storage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎯 How It Works
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Puzzle Solvability Algorithm
 
-### Code Splitting
+Not every random arrangement of tiles can be solved! The game implements a sophisticated solvability check:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**For Odd-Sized Grids (3x3, 5x5):**
+- Puzzle is solvable if the number of inversions is even
 
-### Analyzing the Bundle Size
+**For Even-Sized Grids (2x2, 4x4):**
+- If blank tile is on an even row from bottom → inversions must be odd
+- If blank tile is on an odd row from bottom → inversions must be even
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Inversion Count:**
+An inversion occurs when a tile with a higher number appears before a tile with a lower number in the array (excluding the blank tile).
 
-### Making a Progressive Web App
+### Game Logic
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Initialization**: Generate a solvable puzzle using Fisher-Yates shuffle
+2. **Tile Movement**: Only tiles adjacent to the empty space can be moved
+3. **Win Condition**: All tiles must be in ascending order (0, 1, 2, ..., N²-1)
+4. **Score Tracking**: Minimum moves are saved per difficulty and image
 
-### Advanced Configuration
+## 📦 Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Prerequisites
 
-### Deployment
+- Node.js (v14 or higher)
+- npm or yarn
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Setup
 
-### `npm run build` fails to minify
+1. Clone the repository
+```bash
+git clone https://github.com/Samia2310/scramble-puzzle.git
+cd scramble-puzzle
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server
+```bash
+npm start
+# or
+yarn start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 🎮 How to Play
+
+1. **Select Difficulty**: Choose from Very Easy, Easy, Medium, or Hard
+2. **Pick an Image**: Select your preferred puzzle image from the modal
+3. **Solve the Puzzle**: Click on tiles adjacent to the empty space to slide them
+4. **Track Your Progress**: Monitor your move count and try to beat your best score
+5. **Celebrate Victory**: Complete the puzzle to see your stats and high scores!
+
+## 📁 Project Structure
+```
+scramble-puzzle/
+├── public/
+│   ├── images/        # Puzzle images
+│   ├── audios         # Puzzle audios 
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Controls.js           # Move counter display
+│   │   ├── GameOverModal.js      # Victory modal
+│   │   ├── HighScores.js         # High scores display
+│   │   ├── ImageSelectionModal.js # Image picker
+│   │   ├── PuzzleBoard.js        # Main game board
+│   │   └── StartPage.js          # Landing page
+│   ├── utils/
+│   │   ├── puzzleUtils.js        # Puzzle generation & solvability
+│   │   └── scoreUtils.js         # Score management
+│   ├── App.js                    # Main app component
+│   ├── App.css                   # Global styles
+│   └── index.js                  # Entry point
+├── package.json
+└── README.md
+```
+
+## 🧠 Core Algorithms
+
+### Fisher-Yates Shuffle
+```javascript
+for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+}
+```
+
+### Inversion Count
+```javascript
+function countInversions(puzzle) {
+    let inversions = 0;
+    for (let i = 0; i < n - 1; i++) {
+        for (let j = i + 1; j < n; j++) {
+            if (puzzle[i] > puzzle[j]) {
+                inversions++;
+            }
+        }
+    }
+    return inversions;
+}
+```
+
+## 🎨 Screenshots
+
+<!-- Add your screenshots here -->
+### Start Page
+![Start Page](./screenshots/start-page.png)
+
+### Game Board
+![Game Board](./screenshots/game-board.png)
+
+### Victory Modal
+![Victory Modal](./screenshots/victory-modal.png)
+
+### Image Selection
+![Image Selection](./screenshots/image-selection.png)
+
+## 🔮 Future Enhancements
+
+- [ ] Timer mode for speed challenges
+- [ ] Move history with undo/redo functionality
+- [ ] Hint system for stuck players
+- [ ] Online leaderboard
+- [ ] Custom image upload
+- [ ] Sound effects and background music
+- [ ] Daily puzzle challenges
+- [ ] Multiplayer mode
+- [ ] Progressive Web App (PWA) support
+- [ ] Dark mode theme
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👩‍💻 Author
+
+**Samia Tabassum Chowdhury**
+- Senior Executive, Event Management
+- BRAC University Computer Club
+- GitHub: [Samia2310](https://github.com/Samia2310)
+- LinkedIn: [Samia Tabassum Chowdhury](https://www.linkedin.com/in/samia-tabassum-chowdhury-191229348)
+
+## 🙏 Acknowledgments
+
+- Inspired by the classic 15-puzzle game
+- Solvability algorithm based on mathematical principles of permutation parity
+- Thanks to the React community for excellent documentation
+
+## 📧 Contact
+
+Have questions or suggestions? Feel free to reach out!
+
+- Email: chowdhurysamiatabassum@gmail.com
+- LinkedIn: [Samia Tabassum Chowdhury](https://www.linkedin.com/in/samia-tabassum-chowdhury-191229348)
+
+---
+
+⭐ If you found this project helpful or interesting, please consider giving it a star!
+
+**Can you solve the puzzle in under 50 moves, or will you keep scrambling?** 🧩
