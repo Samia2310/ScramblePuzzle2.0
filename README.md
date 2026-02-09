@@ -10,7 +10,10 @@ A modern, feature-rich sliding tile puzzle game built with React that combines i
 
 ## 🎮 Live Demo
 
-[Play Scramble Puzzle](https://scramble-puzzle2-0.vercel.app/) <!-- Add your deployed link -->
+[Play Scramble Puzzle](https://scramble-puzzle2-0.vercel.app/) 
+<div align="center">
+https://github.com/user-attachments/assets/49b6d69e-7fd2-4edf-98b5-a9e5d71d342d
+</div>
 
 ## 📖 About The Project
 
