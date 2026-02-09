@@ -2,10 +2,9 @@
 
 A modern, feature-rich sliding tile puzzle game built with React that combines intelligent algorithms with an engaging user interface!
 
-![Scramble Puzzle Banner](./public/banner.png) <!-- Add your banner image -->
+<img width="700" height="600" alt="banner" src="https://github.com/user-attachments/assets/187e61bd-2914-4852-9a86-d0e467a93164" />
 
-## 🎮 Live Demo<img width="927" height="873" alt="banner" src="https://github.com/user-attachments/assets/f20f4ee8-d8cc-4c21-93d5-40f745017ba1" />
-
+## 🎮 Live Demo
 
 [Play Scramble Puzzle](https://scramble-puzzle2-0.vercel.app/) <!-- Add your deployed link -->
 
@@ -164,16 +163,21 @@ function countInversions(puzzle) {
 
 <!-- Add your screenshots here -->
 ### Start Page
-![Start Page](./screenshots/start-page.png)
+
+<img width="300" height="500" alt="Screenshot 2026-02-09 213106" src="https://github.com/user-attachments/assets/243b598d-31db-4af1-8803-f8f817a106a6" />
 
 ### Game Board
-![Game Board](./screenshots/game-board.png)
+
+<img width="600" height="700" alt="Screenshot 2026-02-09 213211" src="https://github.com/user-attachments/assets/70d1b6c1-a52d-43a1-9271-f70d5ae901f3" />
 
 ### Victory Modal
-![Victory Modal](./screenshots/victory-modal.png)
+
+<img width="400" height="750" alt="Screenshot 2026-02-09 213423" src="https://github.com/user-attachments/assets/a4c8cd36-f91f-43cb-b9c9-085d9e268746" />
+
 
 ### Image Selection
-![Image Selection](./screenshots/image-selection.png)
+
+<img width="600" height="750" alt="Screenshot 2026-02-09 213323" src="https://github.com/user-attachments/assets/14d8ca8a-7e78-4cc1-8844-e96ba121e35b" />
 
 ## 🔮 Future Enhancements
 
