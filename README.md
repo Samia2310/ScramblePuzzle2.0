@@ -121,7 +121,7 @@ yarn start
 scramble-puzzle/
 ├── public/
 │   ├── images/        # Puzzle images
-│   ├── audios         # Puzzle audios 
+│   ├── audios/         # Puzzle audios 
 │   └── index.html
 ├── src/
 │   ├── components/
